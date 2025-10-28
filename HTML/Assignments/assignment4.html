@@ -1,0 +1,65 @@
+ 
+<!DOCTYPE html> 
+<html> 
+<head> 
+   <title>Room Booking Request Form</title> 
+</head> 
+<body> 
+   <center> 
+   <h1>Hotel Room Booking Form</h1> 
+   <form> 
+       <table> 
+           <tr> 
+               <td>Guest Name:</td> 
+               <td><input type="text" name="guestName" required></td> 
+           </tr> 
+           <tr> 
+               <td>Email Address:</td> 
+               <td><input type="email" name="guestEmail" required></td> 
+           </tr> 
+           <tr> 
+               <td>Contact Number:</td> 
+               <td><input type="tel" name="phone" required></td> 
+           </tr> 
+           <tr> 
+               <td>Arrival Date:</td> 
+               <td><input type="date" name="arrivalDate" 
+placeholder="dd-mm-yyyy" required></td> 
+           </tr> 
+           <tr> 
+               <td>Departure Date:</td> 
+               <td><input type="date" name="departureDate" 
+placeholder="dd-mm-yyyy" required></td> 
+           </tr> 
+           <tr> 
+               <td>Type of Room:</td> 
+               <td> 
+                   <select name="roomKind"> 
+                       <option value="single">Single Suite</option> 
+                       <option value="double">Double Suite</option> 
+                       <option value="premium">Premium Suite</option> 
+                   </select> 
+               </td> 
+           </tr> 
+           <tr> 
+               <td>Total Occupants:</td> 
+               <td><input type="number" name="occupants" required></td> 
+           </tr> 
+           <tr> 
+               <td>Speacial Request:</td> 
+               <td> 
+                   <textarea name="extraWishes" rows="5" cols="30"></textarea> 
+               </td> 
+           </tr> 
+           <br> 
+           <tr> 
+               <td colspan="2" align="center"> 
+                   <input type="submit" value="Reserve Now"> 
+                   <input type="reset" value="Clear Form"> 
+               </td> 
+           </tr> 
+       </table> 
+   </form> 
+   </center> 
+</body> 
+</html> 
