@@ -1,0 +1,26 @@
+body{
+    background-color: aqua;
+    margin:0;
+    padding:0;
+}
+p{
+    font-family: arial;
+    font-size:30px;
+    font-weight:800;
+    font-style:italic;
+    text-align : justify;
+    text-decoration : underline;
+    text-transform: uppercase;
+    text-shadow:0px 0px 10px #F05;
+    color:black;
+    display: inline block;
+
+
+}
+img{
+    border: 2px solid#F04;
+    float:left;
+    border-radius:50%;
+    margin-right:20px;
+    padding:3px;
+}
