@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Layout</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #eef1f5;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px 0;
+        }
+
+        /* Stylish card design */
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        /* Top Layout (Logo + Nav) */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        /* Equal height boxes for banner + intro */
+        .equal-box {
+            height: 70px;
+        }
+
+        /* 3-column row */
+        .row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .box {
+            flex: 1;
+            height: 200px;
+        }
+
+        /* Footer */
+        .footer-box {
+            height: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Logo + Navigation -->
+    <div class="top-bar">
+        <div><b>LOGO</b></div>
+        <div><b>Navigation</b></div>
+    </div>
+
+    <!-- Header / Banner -->
+    <div class="card equal-box">
+        Header / Banner Area
+    </div>
+
+    <!-- Intro Text -->
+    <div class="card equal-box">
+        Intro Text Area
+    </div>
+
+    <!-- Three Boxes Row -->
+    <div class="row">
+        <div class="card box">Box 1</div>
+        <div class="card box">Box 2</div>
+        <div class="card box">Box 3</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card footer-box">
+        Footer
+    </div>
+
+</div>
+
+</body>
+</html>
