@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wrist Watch Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .container img {
+            width: 280px;
+            height: 280px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color:black;
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #e60000;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        ul {
+            text-align: left;
+            margin: 0 auto 15px;
+            padding-left: 20px;
+            font-size: 14px;
+            color: black;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+        }
+
+        button {
+            background-color: #0077cc;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Product Image -->
+        <img src="wrist watch.jpg" alt="Wrist Watch">
+
+        <!-- Product Details -->
+        <h2>Classic Wrist Watch</h2>
+
+        <p>Elegant and stylish wrist watch with durable strap and precise timekeeping. Perfect for daily wear or special occasions.</p>
+
+        <p class="price">₹3,499</p>
+
+        <strong>Highlights:</strong>
+        <ul>
+            <li>Analog & Digital Display</li>
+            <li>Water Resistant</li>
+            <li>Leather Strap</li>
+            <li>1-Year Warranty</li>
+        </ul>
+
+        <button>Add to Cart</button>
+    </div>
+
+</body>
+</html>

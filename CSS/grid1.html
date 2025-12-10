@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: white;
+        }
+        main {
+            width: 1200px;
+            height: 1200px;
+            margin: 0 auto;
+            display: grid;
+            background-color: grey;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        p{
+            font: size 3rem; ;
+
+
+        }
+        .box:nth-child(even) {
+            background-color: aqua;
+            height: 50px;
+        }
+        .box:nth-child(odd){
+            background-color: bisque;
+            height: 50px;
+        }
+        @media screen and (min-width:375px)and(max-width:768px) {
+            main{
+                display: grid;
+                grid-template-columns:repeat(1,1fr);
+                gap: 20px;
+                background-color: aquamarine;
+            }
+            
+        } 
+        .box{
+            height: 600px;
+        }
+        #lft_rgt{
+            display: grid;
+         grid-template-columns: repeat(2,1fr);
+gap: 20px;
+        }
+            
+        .box_left,
+        .box_right
+        {
+            background-color: lightgray;
+            padding: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p> Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Enim quos, dolorum laborum hic corporis perferendis non eius sapiente aliquam quod, dignissimos deleniti dolor
+     praesentium iste pers piciatis rem recusandae deserunt quidem?</p>
+    <main>
+
+        <div class="box">first</div>
+        <div class="box">second</div>
+<div class="box_left">third</div>
+<div class="box_right">fourth</div>
+    </main>
+
+</body>
+</html>

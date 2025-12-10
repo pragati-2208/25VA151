@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wireframe Layout</title>
+  <style>
+    :root{
+      --bg: #f0f1f3;
+      --panel: #ffffff;
+      --muted: #d1d5db;
+      --accent: #e6eef9;
+      --text: #222;
+      --frame: #b86b2a; /* frame border color (like projection board) */
+    }
+
+    /* Page background to mimic classroom wall & projected screen */
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(#c7d7c3 0 40%, #dfe6e2 40% 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: start center;
+      padding: 40px 12px;
+    }
+
+    /* Projected "screen" */
+    .screen {
+      width: min(920px, 92vw);
+      aspect-ratio: 16/10;
+      background: var(--panel);
+      border: 10px solid var(--frame);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      display: grid;
+      grid-template-rows: auto auto 1fr auto;
+      gap: 10px;
+      padding: 14px;
+      box-sizing: border-box;
+    }
+
+    /* Header and nav bars */
+    header {
+      background: #f7fbff;
+      border: 2px solid var(--muted);
+      padding: 8px 12px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: .6px;
+      font-size: 1rem;
+    }
+
+    nav{
+      background: var(--accent);
+      border: 2px solid var(--muted);
+      padding: 8px 12px;
+      text-align: center;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+
+    /* Main grid: left aside, main area, right aside */
+    .layout {
+      display: grid;
+      grid-template-columns: 160px 1fr 160px;
+      gap: 12px;
+      align-items: stretch;
+      padding: 6px;
+      height: 100%;
+    }
+
+    aside {
+      background: linear-gradient(#fafafa,#f4f6f8);
+      border: 2px solid var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      font-weight: 600;
+      text-align: center;
+      font-size: .95rem;
+    }
+
+    main {
+      border: 2px solid var(--muted);
+      background: linear-gradient(#fff,#fbfdff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* the inner centered main content box */
+    .main-box {
+      width: 56%;
+      max-width: 380px;
+      min-width: 220px;
+      aspect-ratio: 1.4 / 1;
+      border: 2px solid var(--muted);
+      box-shadow: inset 0 1px 0 rgba(0,0,0,0.03);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 8px;
+      background: #ffffff;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .main-box .box-header {
+      background: #f1f5f9;
+      border: 1px solid var(--muted);
+      padding: 6px;
+      text-align: center;
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    .box-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      align-items: stretch;
+      padding: 6px;
+    }
+
+    .box-col {
+      border: 1px solid var(--muted);
+      background: #fcfeff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:600;
+      font-size:.85rem;
+      padding:6px;
+    }
+
+    .box-footer {
+      border-top:1px solid var(--muted);
+      padding:6px;
+      text-align:center;
+      font-weight:600;
+      font-size:.88rem;
+      background:#f8fafc;
+    }
+
+    footer {
+      margin-top: 6px;
+      border: 2px solid var(--muted);
+      padding: 8px 12px;
+      text-align: center;
+      font-weight: 600;
+      background: linear-gradient(#f7fbff,#f5f9ff);
+    }
+
+    /* small labels in the main area corners to mimic wireframe labels */
+    .label {
+      position: absolute;
+      font-size: .85rem;
+      color: #475569;
+      font-weight: 700;
+      background: transparent;
+    }
+    .label.left { left: 12px; top: 12px; }
+    .label.right { right: 12px; top: 12px; }
+
+    /* responsive adjustments */
+    @media (max-width: 760px){
+      .layout { grid-template-columns: 1fr; grid-auto-rows: auto; }
+      aside { order: 3; }
+      .label.left, .label.right { display:none; }
+      .main-box { width: 80%; max-width: 420px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="screen" role="region" aria-label="Projected wireframe screen">
+    <header>Header</header>
+    <nav>Navigation Menu</nav>
+
+    <div class="layout">
+      <aside>Content</aside>
+
+      <main>
+        <div class="label left">Content</div>
+        <div class="main-box" aria-label="Main content box">
+          <div class="box-header">Header</div>
+          <div class="box-content">
+            <div class="box-col">Left</div>
+            <div class="box-col" style="display:flex;align-items:center;justify-content:center;">
+              <div style="text-align:center;font-weight:700;">Main<br/>Content</div>
+            </div>
+            <div class="box-col">Right</div>
+          </div>
+          <div class="box-footer">Footer</div>
+        </div>
+        <div class="label right">Content</div>
+      </main>
+
+      <aside>Content</aside>
+    </div>
+
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Container for all cards */
+        .cards-container {
+            display: flex;
+            justify-content: space-around; /* space between cards */
+            flex-wrap: wrap; /* wrap cards on small screens */
+            gap: 20px;
+        }
+
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 220px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 2px solid #0077cc;
+        }
+
+        .profile-card h3 {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .profile-card p {
+            margin: 3px 0;
+            color: #555;
+            font-size: 13px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Student Profiles</h2>
+
+    <div class="cards-container">
+        <!-- Student 1 -->
+        <div class="profile-card">
+            <img src="riya.jpg" alt="Student 1">
+            <h3>Riya Grover</h3>
+            <p>Computer Science</p>
+            <p>CGPA: 8.9</p>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Student 2 -->
+        <div class="profile-card">
+            <img src="boy.webp" alt="Student 2">
+            <h3>Rahul Sharma</h3>
+            <p>Mechanical Engineering</p>
+            <p>CGPA: 8.2</p>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Student 3 -->
+        <div class="profile-card">
+            <img src="akriti.webp" alt="Student 3">
+            <h3>Akriti Verma</h3>
+            <p>Electrical Engineering</p>
+            <p>CGPA: 9.0</p>
+            <button>View Profile</button>
+        </div>
+
+        <!-- Student 4 -->
+        <div class="profile-card">
+            <img src="ayesh.webp" alt="Student 4">
+            <h3>Vikram Singh</h3>
+            <p>Information Technology</p>
+            <p>CGPA: 8.7</p>
+            <button>View Profile</button>
+        </div>
+    </div>
+
+</body>
+</html>

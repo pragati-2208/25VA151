@@ -1,0 +1,3 @@
+css
+
+<link rel=" " href="style.css">- to link css and html file

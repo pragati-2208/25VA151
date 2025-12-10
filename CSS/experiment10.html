@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Responsive E-commerce Navbar</title>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial; }
+
+  nav {
+    background: #111;
+    color: #fff;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h3{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .nav-links, .right-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+  }
+
+  /* Mobile Menu Button */
+  .menu-btn {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .dropdown a {
+    padding: 10px 0;
+  }
+
+  .show { display: flex; }
+
+  /* Responsive Breakpoint */
+  @media(max-width: 768px) {
+    .nav-links, .right-links {
+      display: none;
+    }
+    .menu-btn {
+      display: block;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">ShopEase</div>
+
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Categories</a>
+    <a href="#">Deals</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="right-links">
+    <a href="#">Cart 🛒</a>
+    <a href="#">Login</a>
+  </div>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</nav>
+<script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+  }
+</script>
+<h3>Welcome to shopease!</h3>
+
+</body>
+</html>
